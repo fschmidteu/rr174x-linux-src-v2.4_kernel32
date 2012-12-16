@@ -18,6 +18,10 @@ case ${KERNEL_VER} in
 	OBJ=ko
 	MODVER=`modinfo -F vermagic ${PWD}/${TARGETNAME}.${OBJ} | cut -d' ' -f1`
 	;;
+	3.5 )
+	OBJ=ko
+	MODVER=`modinfo -F vermagic ${PWD}/${TARGETNAME}.${OBJ} | cut -d' ' -f1`
+	;;
 esac
 
 if test "${MODVER}" = "" ; then
