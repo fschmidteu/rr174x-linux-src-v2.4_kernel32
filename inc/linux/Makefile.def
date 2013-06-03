@@ -93,7 +93,7 @@ endif
 endif
 endif
 
-ifeq ($(KERNEL_VER), $(filter $(KERNEL_VER),3.5 3.2 2.6))
+ifeq ($(KERNEL_VER), $(filter $(KERNEL_VER),3.8 3.5 3.2 2.6))
 
 TARGET := $(TARGETNAME).ko
 
