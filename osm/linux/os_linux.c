@@ -198,7 +198,8 @@ void *os_kmap_sgptr(PSG psg)
 
 	if (page)
 		return (PageHighMem(page)?
-				(char *)kmap_atomic(page, HPT_KMAP_TYPE) :
+				//(char *)kmap_atomic(page, HPT_KMAP_TYPE) :
+				(char *)kmap_atomic(page) :
 				(char *)page_address(page))
 			+ (psg->addr.bus & 0xffffffff);
 	else
